@@ -1,4 +1,4 @@
-package net.stegard.messagingstompwebsocket;
+package net.stegard.messagingstompwebsocket.dto;
 
 import lombok.Getter;
 import lombok.Setter;

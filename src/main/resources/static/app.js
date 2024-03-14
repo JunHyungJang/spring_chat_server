@@ -60,7 +60,9 @@ function connectAndSubscribe() {
         // console.log(roomId)
 
         client.subscribe(`/sub/chatroom/${roomId}` , (message) => {
-            showGreeting(JSON.parse(message.body).content);
+            // showGreeting(JSON.parse(message.body).content);
+            console.log("C------ONSOLEMESSAGE------"+ (message.body));
+            showGreeting(message.body);
         });
     };
 
@@ -92,7 +94,7 @@ function sendName() {
     console.log(JSON.stringify({'name': name, 'test' : "testvalue"}))
     stompClient.publish({
         destination: `/pub/chat/${roomId}`,
-        body: JSON.stringify({'name': name, 'test' : "test"}),
+        body: JSON.stringify({'msg': name, 'roomId' : roomId}),
 
         skipContentLengthHeader: true,
     });
@@ -103,6 +105,8 @@ function sendRoomId() {
     const roomId = document.getElementById('roomId').value;
     // console.log(roomId)
     sessionStorage.setItem("roomId",roomId)
+    var a = sessionStorage.getItem("roomId")
+    console.log(a);
 
 }
 

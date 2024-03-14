@@ -1,4 +1,4 @@
-package net.stegard.messagingstompwebsocket;
+package net.stegard.messagingstompwebsocket.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
