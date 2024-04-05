@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
-    <script src="/webjars/github-com-stomp-js-stompjs/stomp.umd.js"></script>
+    <script src="/webjars/github-com-stomp-js-stompjs/stomp.umd.js?ver=220610"></script>
 </head>
 <body>
 <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
@@ -29,9 +29,9 @@
         <div class="col-md-6">
             <form class="form-inline" id="message-form">
                 <div class="form-group">
-                    <label for="name">What is your name?</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your name here...">
-                    <label for="name">What is your roomid?</label>
+                    <label for="content">What is your name?</label>
+                    <input type="text" id="content" class="form-control" placeholder="Your name here...">
+                    <label for="roomId">What is your roomid?</label>
                     <input type="text" id="roomId" class="form-control" placeholder="Your room id here...">
                 </div>
                 <button id="send" class="btn btn-default" type="submit">Send</button>

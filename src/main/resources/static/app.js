@@ -90,11 +90,13 @@ function disconnect() {
 }
 
 function sendName() {
-    const name = document.getElementById('name').value;
-    console.log(JSON.stringify({'name': name, 'test' : "testvalue"}))
+    const content = document.getElementById('content').value;
+    // console.log(JSON.stringify({'name': content, 'test' : "testvalue"}))
+    const jsonObject = JSON.parse(content);
+    console.log(jsonObject)
     stompClient.publish({
         destination: `/pub/chat/${roomId}`,
-        body: JSON.stringify({'msg': name, 'roomId' : roomId}),
+        body: JSON.stringify({'msg': content, 'roomId' : roomId}),
 
         skipContentLengthHeader: true,
     });
