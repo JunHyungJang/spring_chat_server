@@ -48,7 +48,7 @@ public class GreetingController {
         String JsonObject = objectMapper.writeValueAsString(params);
 
 
-        log.info("chatentity" + chatEntity.getId() + chatEntity.getName()+chatEntity.getRoomId()+chatEntity.getContent());
+        log.info("chatentity"ㅎㅑㅅ ㅁ + chatEntity.getId() + chatEntity.getName()+chatEntity.getRoomId()+chatEntity.getContent());
         chatService.createChat(chatEntity);
         kafkaProducer.send("chatting",JsonObject);
 
