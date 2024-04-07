@@ -46,7 +46,7 @@ public class GreetingController {
         chatEntity.setRoomId((String) params.get("roomId"));
         chatEntity.setName((String) params.get("name"));
         String JsonObject = objectMapper.writeValueAsString(params);
-
+        //actiontest
 
         log.info("chatentity"+ chatEntity.getId() + chatEntity.getName()+chatEntity.getRoomId()+chatEntity.getContent());
         chatService.createChat(chatEntity);
