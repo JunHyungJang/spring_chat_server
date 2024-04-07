@@ -31,14 +31,14 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Login docker hub
-        uses: docker/login-action@v2
-        with:
-          username: kevin0459
-          password: dckr_pat_-oOVHvwtFvp9Q5RHJZUaX9RW0sQ
+      uses: docker/login-action@v2
+      with:
+        username: kevin0459
+        password: dckr_pat_-oOVHvwtFvp9Q5RHJZUaX9RW0sQ
 
-      # docker hub 퍼블리시
-      - name: Publish to docker hub
-        run: docker push kevin0459/spring-test
+    # docker hub 퍼블리시
+    - name: Publish to docker hub
+      run: docker push kevin0459/spring-test
 
 
     # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
